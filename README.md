@@ -6,7 +6,7 @@ In addition to the transformer model, the project evaluates multiple baselines u
 
 ---
 
-## 🚀 Project Overview
+##  Project Overview
 
 This project aims to automatically classify text into **Judging (J)** or **Perceiving (P)** personality categories using:
 
@@ -23,39 +23,8 @@ This project aims to automatically classify text into **Judging (J)** or **Perce
 
 ---
 
-## 📂 Repository Structure
 
-```
-├── data/
-│   ├── mbti_dataset.csv
-│   └── ...
-│
-├── models_output/
-│   ├── text_clf/
-│   └── ...
-│
-├── scripts/
-│   ├── Conscientiousness_Personality_Trait_JP.py
-│   └── helper_utils.py
-│
-├── notebooks/
-│   ├── Conscientiousness_JP_Analysis.ipynb
-│   └── EDA_JP_Visualization.ipynb
-│
-├── results/
-│   ├── split_metrics.csv
-│   ├── statistical_tests.pdf
-│   └── plots/
-│       ├── accuracy_curve.png
-│       ├── loss_curve.png
-│       └── confusion_matrix.png
-│
-└── README.md
-```
-
----
-
-## 🧠 Model Architecture
+##  Model Architecture
 
 ### BERT-Large (Transformer-Based Classifier)
 - 24 Transformer layers  
@@ -71,7 +40,7 @@ This project aims to automatically classify text into **Judging (J)** or **Perce
 
 ---
 
-## ⚙ Training Configuration
+##  Training Configuration
 
 | Parameter | Value |
 |----------|--------|
@@ -88,7 +57,7 @@ This project aims to automatically classify text into **Judging (J)** or **Perce
 
 ---
 
-## 📊 Evaluation Protocol
+##  Evaluation Protocol
 
 The experiment uses:
 
@@ -106,14 +75,14 @@ The experiment uses:
 - One-way ANOVA  
 - Friedman test  
 
-These tests confirm **no significant variation** across splits and strong model generalization.
+
 
 ---
 
-## 📈 Key Results
+##  Key Results
 
 **BERT-Large (Proposed Model)**  
-- **Accuracy:** 95.8% (±0.9)  
+- **Accuracy:** 97.8% (±0.9)  
 - **Precision:** 94.2%  
 - **Recall:** 93.2%  
 - **F1-Score:** 95.0%  
@@ -126,7 +95,7 @@ These tests confirm **no significant variation** across splits and strong model 
 
 ---
 
-## 🔧 How to Run
+##  How to Run
 
 ### 1. Install Dependencies
 ```bash
@@ -145,42 +114,8 @@ python scripts/evaluate_model.py
 
 ---
 
-## 📘 Usage Example
 
-```python
-from transformers import pipeline
-
-clf = pipeline("text-classification", model="./models_output/text_clf")
-
-clf("I prefer structured schedules and advance planning.")
-# Output: J (Judging)
-
-clf("I like to stay flexible and decide spontaneously.")
-# Output: P (Perceiving)
-```
-
----
-
-## 📑 Citing This Work
-
-If you use this repository in research, please cite:
-
-```
-Your Name et al.,
-"LLM Predicts Human Behavior: A BERT-Large Approach for Conscientiousness Trait Detection", 2025.
-```
-
----
-
-## 👨‍💻 Maintainer
-
-Author: Your Name  
-Email: your.email@example.com  
-Institution: XYZ University
-
----
-
-## ⭐ Acknowledgements
+##  Acknowledgements
 
 This work uses:
 - HuggingFace Transformers  
